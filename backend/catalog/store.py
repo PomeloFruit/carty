@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from backend.models.schemas import Product
+from models.schemas import Product
 
 
 class CatalogStore(Protocol):
