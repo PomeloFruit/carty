@@ -1,0 +1,722 @@
+[
+  {
+    "id": "activewear-001",
+    "name": "Performance Running Tee",
+    "category": "Activewear",
+    "description": "Lightweight moisture-wicking running shirt with reflective accents for early-morning jogs.",
+    "price": 34.99,
+    "tags": ["running", "moisture-wicking", "lightweight", "unisex", "polyester", "reflective"],
+    "image_url": "https://picsum.photos/seed/activewear-001/400/400"
+  },
+  {
+    "id": "activewear-002",
+    "name": "High-Rise Compression Leggings",
+    "category": "Activewear",
+    "description": "Squat-proof compression leggings with a wide waistband and hidden pocket.",
+    "price": 58.00,
+    "tags": ["leggings", "compression", "women", "squat-proof", "nylon-spandex", "gym"],
+    "image_url": "https://picsum.photos/seed/activewear-002/400/400"
+  },
+  {
+    "id": "activewear-003",
+    "name": "Mesh-Panel Sports Bra",
+    "category": "Activewear",
+    "description": "Medium-support sports bra with breathable mesh panels and racerback design.",
+    "price": 29.99,
+    "tags": ["sports-bra", "medium-support", "women", "breathable", "mesh", "racerback"],
+    "image_url": "https://picsum.photos/seed/activewear-003/400/400"
+  },
+  {
+    "id": "activewear-004",
+    "name": "Men's Training Shorts",
+    "category": "Activewear",
+    "description": "Quick-dry athletic shorts with built-in liner and zippered back pocket.",
+    "price": 38.00,
+    "tags": ["shorts", "training", "men", "quick-dry", "polyester", "gym"],
+    "image_url": "https://picsum.photos/seed/activewear-004/400/400"
+  },
+  {
+    "id": "activewear-005",
+    "name": "Full-Zip Track Jacket",
+    "category": "Activewear",
+    "description": "Slim-fit track jacket with thumb holes and stretchy fabric for warm-ups.",
+    "price": 64.00,
+    "tags": ["jacket", "track", "warm-up", "unisex", "stretchy", "zip"],
+    "image_url": "https://picsum.photos/seed/activewear-005/400/400"
+  },
+  {
+    "id": "activewear-006",
+    "name": "Seamless Yoga Tank",
+    "category": "Activewear",
+    "description": "Ultra-soft seamless tank top designed for yoga and low-impact workouts.",
+    "price": 28.00,
+    "tags": ["yoga", "tank", "women", "seamless", "low-impact", "soft"],
+    "image_url": "https://picsum.photos/seed/activewear-006/400/400"
+  },
+  {
+    "id": "activewear-007",
+    "name": "Reflective Running Vest",
+    "category": "Activewear",
+    "description": "Packable wind-resistant vest with 360-degree reflective details for night runs.",
+    "price": 49.99,
+    "tags": ["vest", "running", "reflective", "wind-resistant", "packable", "unisex"],
+    "image_url": "https://picsum.photos/seed/activewear-007/400/400"
+  },
+  {
+    "id": "activewear-008",
+    "name": "Cross-Training Hoodie",
+    "category": "Activewear",
+    "description": "Midweight fleece-lined hoodie with kangaroo pocket for post-workout warmth.",
+    "price": 55.00,
+    "tags": ["hoodie", "cross-training", "fleece", "unisex", "cotton-blend", "casual"],
+    "image_url": "https://picsum.photos/seed/activewear-008/400/400"
+  },
+  {
+    "id": "activewear-009",
+    "name": "Cycling Bib Shorts",
+    "category": "Activewear",
+    "description": "Padded cycling bibs with flatlock seams and silicone leg grippers.",
+    "price": 89.00,
+    "tags": ["cycling", "bib-shorts", "padded", "men", "lycra", "endurance"],
+    "image_url": "https://picsum.photos/seed/activewear-009/400/400"
+  },
+  {
+    "id": "activewear-010",
+    "name": "Moisture-Wicking Headband",
+    "category": "Activewear",
+    "description": "Wide elastic headband that keeps sweat out of your eyes during intense sessions.",
+    "price": 12.99,
+    "tags": ["headband", "sweat-wicking", "unisex", "elastic", "running", "gym"],
+    "image_url": "https://picsum.photos/seed/activewear-010/400/400"
+  },
+  {
+    "id": "casual-tops-001",
+    "name": "Classic Cotton Crew Tee",
+    "category": "Casual Tops",
+    "description": "Pre-shrunk ring-spun cotton tee with a relaxed fit and ribbed neckline.",
+    "price": 18.00,
+    "tags": ["t-shirt", "cotton", "relaxed-fit", "unisex", "everyday", "crew-neck"],
+    "image_url": "https://picsum.photos/seed/casual-tops-001/400/400"
+  },
+  {
+    "id": "casual-tops-002",
+    "name": "Linen Camp-Collar Shirt",
+    "category": "Casual Tops",
+    "description": "Breezy short-sleeve linen shirt with a relaxed camp collar for warm-weather days.",
+    "price": 44.00,
+    "tags": ["linen", "camp-collar", "men", "summer", "breathable", "short-sleeve"],
+    "image_url": "https://picsum.photos/seed/casual-tops-002/400/400"
+  },
+  {
+    "id": "casual-tops-003",
+    "name": "Striped Breton Top",
+    "category": "Casual Tops",
+    "description": "Boat-neck Breton-stripe top in heavyweight cotton jersey.",
+    "price": 32.00,
+    "tags": ["breton", "striped", "women", "boat-neck", "cotton", "classic"],
+    "image_url": "https://picsum.photos/seed/casual-tops-003/400/400"
+  },
+  {
+    "id": "casual-tops-004",
+    "name": "Oversized Graphic Hoodie",
+    "category": "Casual Tops",
+    "description": "Drop-shoulder hoodie with vintage-inspired graphic print and brushed fleece interior.",
+    "price": 52.00,
+    "tags": ["hoodie", "graphic", "oversized", "unisex", "fleece", "streetwear"],
+    "image_url": "https://picsum.photos/seed/casual-tops-004/400/400"
+  },
+  {
+    "id": "casual-tops-005",
+    "name": "Slim-Fit Oxford Shirt",
+    "category": "Casual Tops",
+    "description": "Button-down oxford cloth shirt with a tapered fit for smart-casual occasions.",
+    "price": 48.00,
+    "tags": ["oxford", "button-down", "men", "smart-casual", "cotton", "slim-fit"],
+    "image_url": "https://picsum.photos/seed/casual-tops-005/400/400"
+  },
+  {
+    "id": "casual-tops-006",
+    "name": "Ribbed Mock-Neck Top",
+    "category": "Casual Tops",
+    "description": "Fitted ribbed knit top with a mock turtleneck for layering or wearing alone.",
+    "price": 26.00,
+    "tags": ["mock-neck", "ribbed", "women", "fitted", "layering", "knit"],
+    "image_url": "https://picsum.photos/seed/casual-tops-006/400/400"
+  },
+  {
+    "id": "casual-tops-007",
+    "name": "Heavyweight Pocket Tee",
+    "category": "Casual Tops",
+    "description": "Thick 6-oz cotton tee with a chest pocket and boxy silhouette.",
+    "price": 24.00,
+    "tags": ["t-shirt", "heavyweight", "men", "boxy", "cotton", "pocket"],
+    "image_url": "https://picsum.photos/seed/casual-tops-007/400/400"
+  },
+  {
+    "id": "casual-tops-008",
+    "name": "Puff-Sleeve Blouse",
+    "category": "Casual Tops",
+    "description": "Lightweight crepe blouse with romantic puff sleeves and a smocked cuff.",
+    "price": 39.00,
+    "tags": ["blouse", "puff-sleeve", "women", "crepe", "romantic", "dressy-casual"],
+    "image_url": "https://picsum.photos/seed/casual-tops-008/400/400"
+  },
+  {
+    "id": "casual-tops-009",
+    "name": "Vintage Wash Henley",
+    "category": "Casual Tops",
+    "description": "Garment-dyed henley with a three-button placket and lived-in softness.",
+    "price": 30.00,
+    "tags": ["henley", "vintage-wash", "men", "garment-dyed", "cotton", "casual"],
+    "image_url": "https://picsum.photos/seed/casual-tops-009/400/400"
+  },
+  {
+    "id": "casual-tops-010",
+    "name": "Cropped Baby Tee",
+    "category": "Casual Tops",
+    "description": "Slim-fit cropped tee in soft cotton with a retro vibe.",
+    "price": 16.00,
+    "tags": ["crop-top", "baby-tee", "women", "retro", "cotton", "slim-fit"],
+    "image_url": "https://picsum.photos/seed/casual-tops-010/400/400"
+  },
+  {
+    "id": "outerwear-001",
+    "name": "Wool-Blend Overcoat",
+    "category": "Outerwear",
+    "description": "Tailored single-breasted overcoat in Italian wool blend for cold-weather commutes.",
+    "price": 189.00,
+    "tags": ["overcoat", "wool-blend", "men", "tailored", "winter", "italian"],
+    "image_url": "https://picsum.photos/seed/outerwear-001/400/400"
+  },
+  {
+    "id": "outerwear-002",
+    "name": "Lightweight Puffer Jacket",
+    "category": "Outerwear",
+    "description": "Packable down-alternative puffer with a water-resistant shell and stand collar.",
+    "price": 79.00,
+    "tags": ["puffer", "lightweight", "unisex", "packable", "water-resistant", "fall"],
+    "image_url": "https://picsum.photos/seed/outerwear-002/400/400"
+  },
+  {
+    "id": "outerwear-003",
+    "name": "Classic Denim Jacket",
+    "category": "Outerwear",
+    "description": "Washed indigo denim trucker jacket with contrast stitching and button closure.",
+    "price": 72.00,
+    "tags": ["denim", "trucker", "unisex", "indigo", "cotton", "classic"],
+    "image_url": "https://picsum.photos/seed/outerwear-003/400/400"
+  },
+  {
+    "id": "outerwear-004",
+    "name": "Waterproof Rain Shell",
+    "category": "Outerwear",
+    "description": "Fully seam-sealed rain jacket with adjustable hood and pit zips for ventilation.",
+    "price": 95.00,
+    "tags": ["rain-jacket", "waterproof", "unisex", "seam-sealed", "hooded", "hiking"],
+    "image_url": "https://picsum.photos/seed/outerwear-004/400/400"
+  },
+  {
+    "id": "outerwear-005",
+    "name": "Sherpa-Lined Flannel Jacket",
+    "category": "Outerwear",
+    "description": "Heavy flannel shirt-jacket with cozy sherpa lining for layered fall looks.",
+    "price": 85.00,
+    "tags": ["flannel", "sherpa", "men", "shirt-jacket", "layering", "fall"],
+    "image_url": "https://picsum.photos/seed/outerwear-005/400/400"
+  },
+  {
+    "id": "outerwear-006",
+    "name": "Cropped Leather Moto Jacket",
+    "category": "Outerwear",
+    "description": "Butter-soft faux-leather moto jacket with asymmetric zip and cropped hem.",
+    "price": 120.00,
+    "tags": ["moto", "faux-leather", "women", "cropped", "edgy", "zip"],
+    "image_url": "https://picsum.photos/seed/outerwear-006/400/400"
+  },
+  {
+    "id": "outerwear-007",
+    "name": "Quilted Barn Coat",
+    "category": "Outerwear",
+    "description": "Diamond-quilted barn coat with corduroy collar and snap front closure.",
+    "price": 110.00,
+    "tags": ["barn-coat", "quilted", "unisex", "corduroy", "heritage", "snap-front"],
+    "image_url": "https://picsum.photos/seed/outerwear-007/400/400"
+  },
+  {
+    "id": "outerwear-008",
+    "name": "Technical Softshell",
+    "category": "Outerwear",
+    "description": "Stretchy wind-resistant softshell jacket for hiking and outdoor activity.",
+    "price": 98.00,
+    "tags": ["softshell", "technical", "unisex", "wind-resistant", "stretchy", "outdoor"],
+    "image_url": "https://picsum.photos/seed/outerwear-008/400/400"
+  },
+  {
+    "id": "outerwear-009",
+    "name": "Long Trench Coat",
+    "category": "Outerwear",
+    "description": "Double-breasted trench coat with removable belt and storm flap detailing.",
+    "price": 155.00,
+    "tags": ["trench", "double-breasted", "women", "belted", "classic", "spring"],
+    "image_url": "https://picsum.photos/seed/outerwear-009/400/400"
+  },
+  {
+    "id": "outerwear-010",
+    "name": "Insulated Parka",
+    "category": "Outerwear",
+    "description": "Knee-length insulated parka with faux-fur-trimmed hood for subzero temps.",
+    "price": 199.00,
+    "tags": ["parka", "insulated", "unisex", "faux-fur", "winter", "knee-length"],
+    "image_url": "https://picsum.photos/seed/outerwear-010/400/400"
+  },
+  {
+    "id": "footwear-001",
+    "name": "Retro Running Sneakers",
+    "category": "Footwear",
+    "description": "Suede-and-mesh retro runners with cushioned midsole and gum rubber outsole.",
+    "price": 89.00,
+    "tags": ["sneakers", "retro", "unisex", "suede", "cushioned", "casual"],
+    "image_url": "https://picsum.photos/seed/footwear-001/400/400"
+  },
+  {
+    "id": "footwear-002",
+    "name": "Minimalist White Leather Sneakers",
+    "category": "Footwear",
+    "description": "Clean low-profile leather sneakers with a margom-style sole.",
+    "price": 110.00,
+    "tags": ["sneakers", "leather", "minimalist", "white", "unisex", "smart-casual"],
+    "image_url": "https://picsum.photos/seed/footwear-002/400/400"
+  },
+  {
+    "id": "footwear-003",
+    "name": "Chelsea Ankle Boots",
+    "category": "Footwear",
+    "description": "Pull-on suede Chelsea boots with elastic gusset and stacked heel.",
+    "price": 98.00,
+    "tags": ["boots", "chelsea", "suede", "women", "ankle", "pull-on"],
+    "image_url": "https://picsum.photos/seed/footwear-003/400/400"
+  },
+  {
+    "id": "footwear-004",
+    "name": "Canvas High-Top Sneakers",
+    "category": "Footwear",
+    "description": "Classic canvas high-tops with vulcanized rubber sole and metal eyelets.",
+    "price": 55.00,
+    "tags": ["sneakers", "high-top", "canvas", "unisex", "classic", "vulcanized"],
+    "image_url": "https://picsum.photos/seed/footwear-004/400/400"
+  },
+  {
+    "id": "footwear-005",
+    "name": "Leather Lace-Up Boots",
+    "category": "Footwear",
+    "description": "Goodyear-welted leather boots with padded collar and commando sole.",
+    "price": 120.00,
+    "tags": ["boots", "leather", "men", "goodyear-welt", "lace-up", "rugged"],
+    "image_url": "https://picsum.photos/seed/footwear-005/400/400"
+  },
+  {
+    "id": "footwear-006",
+    "name": "Slide Sandals",
+    "category": "Footwear",
+    "description": "Contoured-footbed slide sandals with wide strap for poolside or casual wear.",
+    "price": 28.00,
+    "tags": ["sandals", "slides", "unisex", "pool", "summer", "casual"],
+    "image_url": "https://picsum.photos/seed/footwear-006/400/400"
+  },
+  {
+    "id": "footwear-007",
+    "name": "Knit Slip-On Sneakers",
+    "category": "Footwear",
+    "description": "Lightweight engineered-knit slip-ons with a flexible foam sole for all-day comfort.",
+    "price": 65.00,
+    "tags": ["slip-on", "knit", "unisex", "lightweight", "flexible", "comfort"],
+    "image_url": "https://picsum.photos/seed/footwear-007/400/400"
+  },
+  {
+    "id": "footwear-008",
+    "name": "Platform Espadrilles",
+    "category": "Footwear",
+    "description": "Canvas espadrilles with a jute-wrapped platform wedge and ankle tie.",
+    "price": 48.00,
+    "tags": ["espadrilles", "platform", "women", "canvas", "jute", "summer"],
+    "image_url": "https://picsum.photos/seed/footwear-008/400/400"
+  },
+  {
+    "id": "footwear-009",
+    "name": "Trail Hiking Shoes",
+    "category": "Footwear",
+    "description": "Waterproof trail shoes with Vibram outsole and reinforced toe cap.",
+    "price": 105.00,
+    "tags": ["hiking", "trail", "waterproof", "unisex", "vibram", "outdoor"],
+    "image_url": "https://picsum.photos/seed/footwear-009/400/400"
+  },
+  {
+    "id": "footwear-010",
+    "name": "Penny Loafers",
+    "category": "Footwear",
+    "description": "Hand-stitched leather penny loafers with Blake-stitched sole.",
+    "price": 95.00,
+    "tags": ["loafers", "leather", "men", "classic", "blake-stitch", "smart-casual"],
+    "image_url": "https://picsum.photos/seed/footwear-010/400/400"
+  },
+  {
+    "id": "bottoms-001",
+    "name": "Slim-Fit Chinos",
+    "category": "Bottoms",
+    "description": "Stretch-cotton chinos with a slim taper and wrinkle-resistant finish.",
+    "price": 48.00,
+    "tags": ["chinos", "slim-fit", "men", "stretch", "cotton", "wrinkle-resistant"],
+    "image_url": "https://picsum.photos/seed/bottoms-001/400/400"
+  },
+  {
+    "id": "bottoms-002",
+    "name": "High-Waisted Wide-Leg Jeans",
+    "category": "Bottoms",
+    "description": "Rigid denim wide-leg jeans with a high rise and raw hem.",
+    "price": 68.00,
+    "tags": ["jeans", "wide-leg", "women", "high-waisted", "rigid-denim", "raw-hem"],
+    "image_url": "https://picsum.photos/seed/bottoms-002/400/400"
+  },
+  {
+    "id": "bottoms-003",
+    "name": "Cargo Joggers",
+    "category": "Bottoms",
+    "description": "Tapered cargo joggers with elastic waist, side pockets, and ribbed cuffs.",
+    "price": 45.00,
+    "tags": ["joggers", "cargo", "unisex", "tapered", "elastic-waist", "streetwear"],
+    "image_url": "https://picsum.photos/seed/bottoms-003/400/400"
+  },
+  {
+    "id": "bottoms-004",
+    "name": "Pleated Tailored Trousers",
+    "category": "Bottoms",
+    "description": "Single-pleat wide-leg trousers in a lightweight wool blend for the office.",
+    "price": 72.00,
+    "tags": ["trousers", "pleated", "women", "wool-blend", "office", "tailored"],
+    "image_url": "https://picsum.photos/seed/bottoms-004/400/400"
+  },
+  {
+    "id": "bottoms-005",
+    "name": "Classic Straight-Leg Jeans",
+    "category": "Bottoms",
+    "description": "Mid-rise straight-leg jeans in a dark-wash non-stretch denim.",
+    "price": 55.00,
+    "tags": ["jeans", "straight-leg", "men", "dark-wash", "denim", "classic"],
+    "image_url": "https://picsum.photos/seed/bottoms-005/400/400"
+  },
+  {
+    "id": "bottoms-006",
+    "name": "Linen Drawstring Pants",
+    "category": "Bottoms",
+    "description": "Relaxed linen pants with an elastic drawstring waist for vacation vibes.",
+    "price": 42.00,
+    "tags": ["linen", "drawstring", "unisex", "relaxed", "summer", "vacation"],
+    "image_url": "https://picsum.photos/seed/bottoms-006/400/400"
+  },
+  {
+    "id": "bottoms-007",
+    "name": "Corduroy Wide-Leg Pants",
+    "category": "Bottoms",
+    "description": "Thick-wale corduroy wide-legs with a retro high-rise silhouette.",
+    "price": 58.00,
+    "tags": ["corduroy", "wide-leg", "women", "retro", "high-rise", "fall"],
+    "image_url": "https://picsum.photos/seed/bottoms-007/400/400"
+  },
+  {
+    "id": "bottoms-008",
+    "name": "Athletic Shorts 7-inch",
+    "category": "Bottoms",
+    "description": "Versatile 7-inch shorts in quick-dry stretch fabric with side seam pockets.",
+    "price": 32.00,
+    "tags": ["shorts", "athletic", "men", "quick-dry", "stretch", "versatile"],
+    "image_url": "https://picsum.photos/seed/bottoms-008/400/400"
+  },
+  {
+    "id": "bottoms-009",
+    "name": "A-Line Midi Skirt",
+    "category": "Bottoms",
+    "description": "Flowy A-line midi skirt in printed crepe with a concealed side zip.",
+    "price": 46.00,
+    "tags": ["skirt", "midi", "women", "a-line", "crepe", "printed"],
+    "image_url": "https://picsum.photos/seed/bottoms-009/400/400"
+  },
+  {
+    "id": "bottoms-010",
+    "name": "Fleece Sweatpants",
+    "category": "Bottoms",
+    "description": "Heavyweight French-terry sweatpants with ribbed cuffs and drawstring waist.",
+    "price": 40.00,
+    "tags": ["sweatpants", "fleece", "unisex", "heavyweight", "french-terry", "cozy"],
+    "image_url": "https://picsum.photos/seed/bottoms-010/400/400"
+  },
+  {
+    "id": "accessories-001",
+    "name": "Leather Minimalist Belt",
+    "category": "Accessories",
+    "description": "Full-grain leather belt with a slim brushed-nickel buckle.",
+    "price": 35.00,
+    "tags": ["belt", "leather", "minimalist", "unisex", "full-grain", "classic"],
+    "image_url": "https://picsum.photos/seed/accessories-001/400/400"
+  },
+  {
+    "id": "accessories-002",
+    "name": "Polarized Aviator Sunglasses",
+    "category": "Accessories",
+    "description": "Metal-frame aviator sunglasses with polarized gradient lenses and UV400 protection.",
+    "price": 42.00,
+    "tags": ["sunglasses", "aviator", "polarized", "unisex", "uv400", "metal"],
+    "image_url": "https://picsum.photos/seed/accessories-002/400/400"
+  },
+  {
+    "id": "accessories-003",
+    "name": "Canvas Tote Bag",
+    "category": "Accessories",
+    "description": "Heavy-duty cotton canvas tote with interior zip pocket and reinforced handles.",
+    "price": 28.00,
+    "tags": ["tote", "canvas", "unisex", "cotton", "everyday", "casual"],
+    "image_url": "https://picsum.photos/seed/accessories-003/400/400"
+  },
+  {
+    "id": "accessories-004",
+    "name": "Merino Wool Beanie",
+    "category": "Accessories",
+    "description": "Rib-knit merino wool beanie that's warm yet itch-free.",
+    "price": 24.00,
+    "tags": ["beanie", "merino", "unisex", "knit", "winter", "wool"],
+    "image_url": "https://picsum.photos/seed/accessories-004/400/400"
+  },
+  {
+    "id": "accessories-005",
+    "name": "Woven Leather Watch Strap",
+    "category": "Accessories",
+    "description": "Hand-braided leather watch strap with quick-release spring bars, fits 20mm lugs.",
+    "price": 32.00,
+    "tags": ["watch-strap", "leather", "braided", "unisex", "20mm", "quick-release"],
+    "image_url": "https://picsum.photos/seed/accessories-005/400/400"
+  },
+  {
+    "id": "accessories-006",
+    "name": "Silk Pocket Square",
+    "category": "Accessories",
+    "description": "Italian-made silk pocket square in a classic paisley print.",
+    "price": 22.00,
+    "tags": ["pocket-square", "silk", "men", "italian", "paisley", "formal"],
+    "image_url": "https://picsum.photos/seed/accessories-006/400/400"
+  },
+  {
+    "id": "accessories-007",
+    "name": "Structured Crossbody Bag",
+    "category": "Accessories",
+    "description": "Compact pebble-leather crossbody with gold hardware and adjustable strap.",
+    "price": 68.00,
+    "tags": ["crossbody", "leather", "women", "pebble-grain", "gold-hardware", "compact"],
+    "image_url": "https://picsum.photos/seed/accessories-007/400/400"
+  },
+  {
+    "id": "accessories-008",
+    "name": "Cotton Bandana",
+    "category": "Accessories",
+    "description": "Oversized cotton bandana with artisanal block-print pattern.",
+    "price": 14.00,
+    "tags": ["bandana", "cotton", "unisex", "block-print", "artisanal", "versatile"],
+    "image_url": "https://picsum.photos/seed/accessories-008/400/400"
+  },
+  {
+    "id": "accessories-009",
+    "name": "Leather Cardholder",
+    "category": "Accessories",
+    "description": "Slim vegetable-tanned leather cardholder with four slots and center pocket.",
+    "price": 30.00,
+    "tags": ["cardholder", "leather", "unisex", "slim", "vegetable-tanned", "minimal"],
+    "image_url": "https://picsum.photos/seed/accessories-009/400/400"
+  },
+  {
+    "id": "accessories-010",
+    "name": "Cashmere Scarf",
+    "category": "Accessories",
+    "description": "Lightweight pure-cashmere scarf with rolled edges in a solid neutral tone.",
+    "price": 78.00,
+    "tags": ["scarf", "cashmere", "unisex", "lightweight", "neutral", "luxury"],
+    "image_url": "https://picsum.photos/seed/accessories-010/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-001",
+    "name": "Wrap Midi Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "True-wrap midi dress in printed viscose with flutter sleeves.",
+    "price": 62.00,
+    "tags": ["dress", "wrap", "midi", "women", "viscose", "flutter-sleeve"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-001/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-002",
+    "name": "Linen Shift Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Easy A-line linen shift dress with side-seam pockets and boat neck.",
+    "price": 54.00,
+    "tags": ["dress", "linen", "shift", "women", "a-line", "summer"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-002/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-003",
+    "name": "Ribbed Knit Bodycon Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Figure-hugging ribbed-knit midi dress with a subtle slit at the hem.",
+    "price": 45.00,
+    "tags": ["dress", "bodycon", "ribbed", "women", "knit", "midi"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-003/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-004",
+    "name": "Floral Maxi Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Tiered maxi dress in ditsy floral print with adjustable spaghetti straps.",
+    "price": 68.00,
+    "tags": ["dress", "maxi", "floral", "women", "tiered", "spaghetti-strap"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-004/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-005",
+    "name": "Wide-Leg Jumpsuit",
+    "category": "Dresses & Jumpsuits",
+    "description": "Sleeveless wide-leg jumpsuit with a belted waist in soft twill.",
+    "price": 75.00,
+    "tags": ["jumpsuit", "wide-leg", "women", "belted", "twill", "dressy"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-005/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-006",
+    "name": "Satin Slip Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Bias-cut satin slip dress with delicate lace trim at the neckline.",
+    "price": 58.00,
+    "tags": ["dress", "satin", "slip", "women", "bias-cut", "lace", "evening"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-006/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-007",
+    "name": "Denim Shirt Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Relaxed shirt dress in soft chambray with a self-tie belt and rolled sleeves.",
+    "price": 52.00,
+    "tags": ["dress", "denim", "shirt-dress", "women", "chambray", "casual"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-007/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-008",
+    "name": "Utility Romper",
+    "category": "Dresses & Jumpsuits",
+    "description": "Cotton-twill short romper with zip front and multiple utility pockets.",
+    "price": 48.00,
+    "tags": ["romper", "utility", "women", "cotton", "zip-front", "pockets"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-008/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-009",
+    "name": "Smocked Sundress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Strapless smocked-bodice sundress in gingham cotton with ruffle hem.",
+    "price": 42.00,
+    "tags": ["dress", "sundress", "smocked", "women", "gingham", "strapless"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-009/400/400"
+  },
+  {
+    "id": "dresses-jumpsuits-010",
+    "name": "Tailored Blazer Dress",
+    "category": "Dresses & Jumpsuits",
+    "description": "Double-breasted blazer-style mini dress with padded shoulders and gold buttons.",
+    "price": 88.00,
+    "tags": ["dress", "blazer-dress", "women", "tailored", "mini", "gold-buttons"],
+    "image_url": "https://picsum.photos/seed/dresses-jumpsuits-010/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-001",
+    "name": "Scoop-Neck One-Piece",
+    "category": "Swimwear & Loungewear",
+    "description": "Classic one-piece swimsuit with a low scoop back and shelf bra.",
+    "price": 52.00,
+    "tags": ["swimsuit", "one-piece", "women", "scoop-neck", "shelf-bra", "beach"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-001/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-002",
+    "name": "Board Shorts",
+    "category": "Swimwear & Loungewear",
+    "description": "Quick-dry board shorts with all-over tropical print and mesh-lined waistband.",
+    "price": 36.00,
+    "tags": ["board-shorts", "swim", "men", "quick-dry", "tropical", "mesh-lined"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-002/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-003",
+    "name": "Waffle-Knit Robe",
+    "category": "Swimwear & Loungewear",
+    "description": "Lightweight waffle-weave cotton robe with shawl collar and tie belt.",
+    "price": 48.00,
+    "tags": ["robe", "waffle-knit", "unisex", "cotton", "shawl-collar", "spa"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-003/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-004",
+    "name": "Modal Sleep Set",
+    "category": "Swimwear & Loungewear",
+    "description": "Buttery-soft modal pajama set with piping trim and elastic-waist pants.",
+    "price": 44.00,
+    "tags": ["pajamas", "modal", "women", "sleep-set", "soft", "piping"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-004/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-005",
+    "name": "Swim Trunks",
+    "category": "Swimwear & Loungewear",
+    "description": "Mid-length recycled-nylon swim trunks with an internal drawcord.",
+    "price": 34.00,
+    "tags": ["swim-trunks", "recycled-nylon", "men", "mid-length", "sustainable", "drawcord"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-005/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-006",
+    "name": "Bikini Top – Triangle",
+    "category": "Swimwear & Loungewear",
+    "description": "Adjustable triangle bikini top with removable padding and tie closure.",
+    "price": 28.00,
+    "tags": ["bikini-top", "triangle", "women", "adjustable", "removable-pad", "beach"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-006/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-007",
+    "name": "Fleece Lounge Pants",
+    "category": "Swimwear & Loungewear",
+    "description": "Plush micro-fleece lounge pants with side pockets and elastic waist.",
+    "price": 30.00,
+    "tags": ["lounge-pants", "fleece", "unisex", "plush", "cozy", "elastic-waist"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-007/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-008",
+    "name": "Oversized Sleep Tee",
+    "category": "Swimwear & Loungewear",
+    "description": "Extra-long cotton sleep tee that doubles as a nightshirt or cover-up.",
+    "price": 22.00,
+    "tags": ["sleep-tee", "oversized", "women", "cotton", "nightshirt", "cover-up"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-008/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-009",
+    "name": "High-Waist Bikini Bottom",
+    "category": "Swimwear & Loungewear",
+    "description": "Retro high-waist bikini bottom with full coverage and ruched side detail.",
+    "price": 26.00,
+    "tags": ["bikini-bottom", "high-waist", "women", "retro", "full-coverage", "ruched"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-009/400/400"
+  },
+  {
+    "id": "swimwear-loungewear-010",
+    "name": "Bamboo Boxer Briefs 3-Pack",
+    "category": "Swimwear & Loungewear",
+    "description": "Breathable bamboo-viscose boxer briefs with no-roll waistband, pack of three.",
+    "price": 38.00,
+    "tags": ["underwear", "boxer-briefs", "men", "bamboo", "breathable", "3-pack"],
+    "image_url": "https://picsum.photos/seed/swimwear-loungewear-010/400/400"
+  }
+]
