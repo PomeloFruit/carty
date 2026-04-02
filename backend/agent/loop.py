@@ -6,6 +6,7 @@ import json
 from typing import Any
 
 import httpx
+from fastapi import HTTPException
 
 from catalog.store import CatalogStore
 from config import settings
@@ -94,22 +95,29 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
 
     async with httpx.AsyncClient(timeout=60.0) as client:
         # --- Turn 1: may trigger tool call ---
-        resp1 = await client.post(
-            f"{settings.openrouter_base_url}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {settings.openrouter_api_key}",
-                "HTTP-Referer": "https://github.com/pomelofruit/carty",
-            },
-            json={
-                "model": settings.openrouter_model,
-                "messages": [{"role": "system", "content": _SYSTEM_PROMPT}] + messages,
-                "tools": _TOOL_SCHEMA,
-                "tool_choice": "auto",
-            },
-        )
-        resp1.raise_for_status()
+        try:
+            resp1 = await client.post(
+                f"{settings.openrouter_base_url}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {settings.openrouter_api_key}",
+                    "HTTP-Referer": "https://github.com/pomelofruit/carty",
+                },
+                json={
+                    "model": settings.openrouter_model,
+                    "messages": [{"role": "system", "content": _SYSTEM_PROMPT}] + messages,
+                    "tools": _TOOL_SCHEMA,
+                    "tool_choice": "auto",
+                },
+            )
+            resp1.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            raise HTTPException(status_code=502, detail="LLM service error") from exc
+
         data1 = resp1.json()
-        choice1 = data1["choices"][0]
+        choices1 = data1.get("choices", [])
+        if not choices1:
+            raise HTTPException(status_code=502, detail="LLM returned no choices")
+        choice1 = choices1[0]
         msg1 = choice1["message"]
 
         products: list[Product] = []
@@ -120,7 +128,10 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
             for tc in msg1["tool_calls"]:
                 fn = tc["function"]
                 if fn["name"] == "search_catalog":
-                    args = json.loads(fn["arguments"])
+                    try:
+                        args = json.loads(fn["arguments"])
+                    except json.JSONDecodeError:
+                        continue
                     hits = store.search(args["query"], top_k=settings.max_search_results)
                     products.extend(hits)
                     tool_results.append(
@@ -143,24 +154,31 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
                     )
 
             # --- Turn 2: synthesise ---
-            resp2 = await client.post(
-                f"{settings.openrouter_base_url}/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {settings.openrouter_api_key}",
-                    "HTTP-Referer": "https://github.com/pomelofruit/carty",
-                },
-                json={
-                    "model": settings.openrouter_model,
-                    "messages": (
-                        [{"role": "system", "content": _SYSTEM_PROMPT}]
-                        + messages
-                        + [msg1]
-                        + tool_results
-                    ),
-                },
-            )
-            resp2.raise_for_status()
-            reply_text = resp2.json()["choices"][0]["message"]["content"] or ""
+            try:
+                resp2 = await client.post(
+                    f"{settings.openrouter_base_url}/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {settings.openrouter_api_key}",
+                        "HTTP-Referer": "https://github.com/pomelofruit/carty",
+                    },
+                    json={
+                        "model": settings.openrouter_model,
+                        "messages": (
+                            [{"role": "system", "content": _SYSTEM_PROMPT}]
+                            + messages
+                            + [msg1]
+                            + tool_results
+                        ),
+                    },
+                )
+                resp2.raise_for_status()
+            except httpx.HTTPStatusError as exc:
+                raise HTTPException(status_code=502, detail="LLM service error") from exc
+
+            choices2 = resp2.json().get("choices", [])
+            if not choices2:
+                raise HTTPException(status_code=502, detail="LLM returned no choices")
+            reply_text = choices2[0]["message"]["content"] or ""
         else:
             reply_text = msg1.get("content") or ""
 

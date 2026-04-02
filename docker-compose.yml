@@ -3,7 +3,8 @@ services:
     build: ./backend
     environment:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      - OPENROUTER_MODEL=${OPENROUTER_MODEL:-meta-llama/llama-4-scout:free}
+      - OPENROUTER_MODEL=${OPENROUTER_MODEL}
+      - OPENROUTER_BASE_URL=${OPENROUTER_BASE_URL}
     ports:
       - "8000:8000"
     restart: unless-stopped

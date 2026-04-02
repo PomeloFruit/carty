@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    openrouter_api_key: str
-    openrouter_model: str = "meta-llama/llama-4-scout:free"
-    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+    openrouter_api_key: str = ""
+    openrouter_model: str = ""
+    openrouter_base_url: str = ""
     catalog_path: str = "catalog/products.json"
     embed_model: str = "all-MiniLM-L6-v2"
     max_search_results: int = 6
