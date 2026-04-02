@@ -9,17 +9,17 @@ export default function App() {
     <div style={{
       display: 'flex', flexDirection: 'column',
       height: '100dvh', maxWidth: 800,
-      margin: '0 auto', fontFamily: 'system-ui, sans-serif',
-      background: '#fff',
+      margin: '0 auto',
+      background: '#f7f5f2',
     }}>
       <header style={{
-        padding: '14px 20px', borderBottom: '1px solid #e5e7eb',
-        background: '#fff', flexShrink: 0,
+        padding: '14px 20px', borderBottom: '1px solid #3d3532',
+        background: '#292524', flexShrink: 0,
       }}>
-        <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: '#111827' }}>
-          🛍️ Carty
+        <h1 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: '#faf9f7' }}>
+          Carty
         </h1>
-        <p style={{ margin: 0, fontSize: 13, color: '#6b7280' }}>
+        <p style={{ margin: 0, fontSize: 13, color: '#a8a29e' }}>
           Your AI shopping assistant
         </p>
       </header>

@@ -6,9 +6,9 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <div style={{
+    <div className="product-card" style={{
       width: 160, flexShrink: 0,
-      border: '1px solid #e5e7eb', borderRadius: 12,
+      border: '1px solid #e8e3dc', borderRadius: 12,
       overflow: 'hidden', background: '#fff',
       boxShadow: '0 1px 4px rgba(0,0,0,0.06)',
     }}>
@@ -22,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.3, marginBottom: 4 }}>
           {product.name}
         </div>
-        <div style={{ fontSize: 12, color: '#6b7280', marginBottom: 4 }}>
+        <div style={{ fontSize: 12, color: '#78716c', marginBottom: 4 }}>
           {product.category}
         </div>
         <div style={{ fontSize: 14, fontWeight: 700, color: '#111827' }}>

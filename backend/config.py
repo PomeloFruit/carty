@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     embed_model: str = "all-MiniLM-L6-v2"
     max_search_results: int = 6
     cors_origins: list[str] = ["http://localhost:3000"]
+    cors_extra_origins: list[str] = []  # append production origins (e.g. Vercel URL) via env var
     max_message_length: int = 2000
     max_image_bytes: int = 5_242_880  # 5MB
 

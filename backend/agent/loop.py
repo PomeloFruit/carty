@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import binascii
 import json
+import re
 from typing import Any
 
 import httpx
@@ -10,7 +11,7 @@ from fastapi import HTTPException
 
 from catalog.store import CatalogStore
 from config import settings
-from models.schemas import ChatRequest, ChatResponse, Message, Product
+from models.schemas import ChatRequest, ChatResponse, Product
 
 
 _TOOL_SCHEMA: list[dict[str, Any]] = [
@@ -58,9 +59,36 @@ def _detect_mime_type(data: bytes) -> str:
     return "image/jpeg"  # fallback
 
 
-def _build_messages(request: ChatRequest) -> list[dict[str, Any]]:
-    messages: list[dict[str, Any]] = []
+def _extract_text_tool_call_query(text: str) -> str | None:
+    """Extract a search_catalog query from models that output tool calls as text.
 
+    The OpenAI tool-calling protocol requires models to signal a tool call via
+    a structured `tool_calls` field on the response message and set
+    `finish_reason` to "tool_calls". Capable models (e.g. Llama 4, GPT-4o)
+    follow this correctly.
+
+    However, some smaller free models — have problems using tool_calls. Instead
+    sometimes they embed a JSON-like invocation directly in the response text, e.g.:
+        TOOLCALL>[{"name": "search_catalog", "arguments": {"query": "..."}}]CALL>
+
+    Because `finish_reason` is "stop" in these cases, the structured branch is
+    never entered and the raw garbled text leaks to the user. This function
+    detects that situation by scanning for any JSON object containing a query
+    key, which is the only argument search_catalog accepts.
+    """
+    # Only treat this as a text-based tool call if "search_catalog" is named
+    # somewhere in the text, then extract the "query" value directly.
+    # We avoid trying to parse the full JSON because the outer object has nested
+    # braces ({"name": ..., "arguments": {"query": ...}}) which a simple
+    # non-nested regex can't match, and a full JSON parse is fragile against
+    # the truncated/malformed output these models tend to produce.
+    if "search_catalog" not in text:
+        return None
+    match = re.search(r'"query"\s*:\s*"([^"]+)"', text)
+    return match.group(1) if match else None
+
+
+def _build_messages(request: ChatRequest) -> list[dict[str, Any]]:
     history = list(request.messages)
 
     # If there's an image, attach it to the last user message
@@ -122,8 +150,16 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
 
         products: list[Product] = []
 
-        if choice1.get("finish_reason") == "tool_calls" and msg1.get("tool_calls"):
-            # Execute tool calls
+        # Some models output tool calls as text instead of using the structured
+        # tool_calls protocol. We handle both: the proper protocol first, then
+        # a fallback that scans the reply text for an embedded query.
+        text_content = msg1.get("content") or ""
+        bad_query = _extract_text_tool_call_query(text_content)
+        using_structured = choice1.get("finish_reason") == "tool_calls" and msg1.get("tool_calls")
+
+        if using_structured:
+            # Standard protocol: model set finish_reason="tool_calls" and
+            # populated the tool_calls field correctly.
             tool_results: list[dict[str, Any]] = []
             for tc in msg1["tool_calls"]:
                 fn = tc["function"]
@@ -154,6 +190,48 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
                     )
 
             # --- Turn 2: synthesise ---
+            # Include msg1 as the protocol requires (it carries the tool_calls
+            # field that Turn 2 needs to reference).
+            turn2_messages = (
+                [{"role": "system", "content": _SYSTEM_PROMPT}]
+                + messages
+                + [msg1]
+                + tool_results
+            )
+
+        elif bad_query:
+            # Fallback for non-compliant models: the model wrote the tool call
+            # as plain text (e.g. TOOLCALL>[{...}]CALL>) instead of using the
+            # structured protocol. We run the search manually using the query
+            # we extracted, then inject results as a system message.
+            # msg1 is intentionally omitted from Turn 2 — re-sending the
+            # garbled text would confuse the model.
+            hits = store.search(bad_query, top_k=settings.max_search_results)
+            products.extend(hits)
+            tool_results = [
+                {
+                    "role": "system",
+                    "content": "search_catalog results:\n" + json.dumps(
+                        [
+                            {
+                                "id": p.id,
+                                "name": p.name,
+                                "category": p.category,
+                                "price": p.price,
+                                "description": p.description,
+                            }
+                            for p in hits
+                        ]
+                    ),
+                }
+            ]
+            turn2_messages = (
+                [{"role": "system", "content": _SYSTEM_PROMPT}]
+                + messages
+                + tool_results
+            )
+
+        if using_structured or bad_query:
             try:
                 resp2 = await client.post(
                     f"{settings.openrouter_base_url}/chat/completions",
@@ -163,12 +241,7 @@ async def run_agent(request: ChatRequest, store: CatalogStore) -> ChatResponse:
                     },
                     json={
                         "model": settings.openrouter_model,
-                        "messages": (
-                            [{"role": "system", "content": _SYSTEM_PROMPT}]
-                            + messages
-                            + [msg1]
-                            + tool_results
-                        ),
+                        "messages": turn2_messages,
                     },
                 )
                 resp2.raise_for_status()

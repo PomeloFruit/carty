@@ -48,7 +48,7 @@ export function ChatInput({
   }
 
   return (
-    <div style={{ borderTop: '1px solid #e5e7eb', padding: '12px 16px', background: '#fff' }}>
+    <div style={{ borderTop: '1px solid #e8e3dc', padding: '12px 16px', background: '#fff' }}>
       {pendingImageDataUrl && (
         <div style={{ marginBottom: 8 }}>
           <ImagePreview dataUrl={pendingImageDataUrl} onRemove={onImageRemove} />
@@ -61,8 +61,8 @@ export function ChatInput({
           aria-label="Attach image"
           style={{
             flexShrink: 0, width: 36, height: 36,
-            border: '1px solid #e5e7eb', borderRadius: 8,
-            background: '#f9fafb', cursor: disabled ? 'not-allowed' : 'pointer',
+            border: '1px solid #e8e3dc', borderRadius: 8,
+            background: '#f7f5f2', cursor: disabled ? 'not-allowed' : 'pointer',
             fontSize: 18, display: 'flex', alignItems: 'center', justifyContent: 'center',
           }}
         >
@@ -84,7 +84,7 @@ export function ChatInput({
           rows={1}
           style={{
             flex: 1, resize: 'none', borderRadius: 8,
-            border: '1px solid #e5e7eb', padding: '8px 12px',
+            border: '1px solid #e8e3dc', padding: '8px 12px',
             fontSize: 14, lineHeight: 1.5, outline: 'none',
             fontFamily: 'inherit',
           }}
@@ -94,7 +94,7 @@ export function ChatInput({
           disabled={disabled || (!text.trim() && !pendingImageDataUrl)}
           style={{
             flexShrink: 0, width: 36, height: 36,
-            background: '#2563eb', color: '#fff',
+            background: '#292524', color: '#fff',
             border: 'none', borderRadius: 8,
             cursor: disabled ? 'not-allowed' : 'pointer',
             fontSize: 18, display: 'flex', alignItems: 'center', justifyContent: 'center',
