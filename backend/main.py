@@ -28,8 +28,3 @@ app.add_middleware(
 
 app.include_router(chat_router, prefix="/api")
 app.include_router(products_router, prefix="/api")
-
-
-@app.get("/api/health")
-async def health() -> dict[str, str]:
-    return {"status": "ok"}
